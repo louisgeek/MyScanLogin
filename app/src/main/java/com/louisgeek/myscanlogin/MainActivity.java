@@ -25,6 +25,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
     Context mContext;
     NSDClient mNSDClient;
     ListView id_lv;

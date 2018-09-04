@@ -67,17 +67,17 @@ public class TcpServer {
         @Override
         public void run() {
             Log.e(TAG, "ReceiveRunnable run: ");
-            //
+            //接收
             InputStream is = null;
             InputStreamReader isr = null;
             BufferedReader br = null;
+            //发送
             try {
                 if (socket.isConnected() && !socket.isClosed()) {
-                    // 接受客户端数据
+                    // 接收客户端数据
                     is = socket.getInputStream();
                     isr = new InputStreamReader(is);
                     br = new BufferedReader(isr);
-                    // 读取数据
                     String info = null;
                     Log.e(TAG, "ReceiveRunnable 读取数据 ");
                     while ((info = br.readLine()) != null) {
